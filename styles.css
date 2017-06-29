@@ -1,15 +1,13 @@
 /* add your CSS here */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 #favorite-animal-card {
   width: 320px;
   height: auto;
   margin: 50px auto;
   border: 1px #eaeaea solid;
-  -webkit-box-shadow: 5px 5px 1px #d8d8d8;
-          box-shadow: 5px 5px 1px #d8d8d8;
+  box-shadow: 5px 5px 1px #d8d8d8;
   font-size: 14px;
   border-radius: 3px; }
 
