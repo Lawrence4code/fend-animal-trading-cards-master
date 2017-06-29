@@ -11,7 +11,7 @@
   -webkit-box-shadow: 5px 5px 1px #d8d8d8;
           box-shadow: 5px 5px 1px #d8d8d8;
   font-size: 14px;
-  border-radius: 2px; }
+  border-radius: 3px; }
 
 h3 {
   margin: 20px 10px; }
@@ -21,14 +21,14 @@ img {
   height: 200px;
   margin: 0 10px; }
 
-#favorite-animal-card div {
+.animal-information {
   border: 1px #eaeaea solid;
   margin: 10px;
-  border-radius: 2px; }
+  border-radius: 3px; }
 
-div ul {
+.animal-information ul {
   list-style-type: none;
   padding: 10px; }
 
-div p {
+.animal-information p {
   padding: 0 10px; }
