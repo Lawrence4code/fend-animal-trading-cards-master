@@ -15,7 +15,6 @@ module.exports = app => {
   // handling logout
   // this route will be initiated by the user
   app.get('/api/logout', (req, res) => {
-    console.log('Logged off');
     req.logout();
     res.send(req.user);
   });
@@ -24,8 +23,5 @@ module.exports = app => {
   // this route will be initiated when???
   app.get('/api/current_user', (req, res) => {
     res.send(req.user);
-    if (!req.user) {
-      console.log('Not user available with the cookie provided.');
-    }
   });
 };
