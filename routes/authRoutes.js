@@ -6,17 +6,26 @@ const passport = require('passport');
 module.exports = app => {
   app.get(
     '/auth/google',
-    passport.authenticate('google', { scope: ['profile', 'email'] })
+    passport.authenticate('google', {
+      scope: ['profile', 'email'],
+      prompt: 'select_account'
+    })
   );
 
   // this route is for google oauth return callback
-  app.get('/auth/google/callback', passport.authenticate('google'));
+  app.get(
+    '/auth/google/callback',
+    passport.authenticate('google'),
+    (req, res) => {
+      res.redirect('/survey');
+    }
+  );
 
   // handling logout
   // this route will be initiated by the user
   app.get('/api/logout', (req, res) => {
     req.logout();
-    res.send(req.user);
+    res.redirect('/');
   });
 
   // handling existing user with the help of cookies provided at the tine of login
