@@ -42,3 +42,5 @@ public/dist/
 # Internal Test/Secure Files #
 ######################
 dev.js
+.env.development
+.env.production

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import StripeComponent from './StripeComponent';
 
 class Header extends Component {
   renderContent = () => {
@@ -14,15 +15,17 @@ class Header extends Component {
           </li>
         );
       default:
-        return (
+        return [
+          <li>
+            <StripeComponent />
+          </li>,
           <li>
             <a href="/api/logout"> Logout </a>
           </li>
-        );
+        ];
     }
   };
   render() {
-    console.log(this.props);
     return (
       <nav>
         <div className="nav-wrapper">
